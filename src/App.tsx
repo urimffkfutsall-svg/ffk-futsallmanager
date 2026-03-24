@@ -42,7 +42,7 @@ const App = () => (
                 <Route path="/statistikat" element={<StatistikatPage />} />
                 <Route path="/skuadra/:id" element={<TeamProfilePage />} />
                 <Route path="/head-to-head" element={<HeadToHeadPage />} />
-                <Route path="/login" element={<LoginPage />} />
+                <Route path="/clear-data" element={<div>{(() => { localStorage.clear(); window.location.href = "/"; })()}<p>Duke pastruar...</p></div>} />`n                <Route path="/login" element={<LoginPage />} />
                 <Route path="/admin" element={<AdminPage />} />`n                <Route path="/editor/team" element={<EditorTeamPage />} />`n                <Route path="/statistikat/individuale" element={<IndividualStatsPage />} />
                 <Route path="/formacioni" element={<FormacioniPage />} />
                 <Route path="/komisioni" element={<KomisioniPage />} />`n                <Route path="*" element={<NotFound />} />
